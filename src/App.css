@@ -22,7 +22,8 @@
 }
 @media (max-width: 760px) {
     .form-img{
-        width: 35vw;
+        width: 45vw;
+        height: 35vh;
     }
 }
 

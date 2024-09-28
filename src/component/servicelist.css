@@ -41,6 +41,15 @@
         font-size: 1.5rem;               
         letter-spacing: 2px;           
     }
+    table{
+       width: 100%;
+    }
+    .edit-form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
 }
 table{
     border: 2px solid rgb(221, 20, 20);
@@ -64,4 +73,11 @@ button{
   display: inline-block;
   margin: 4px 2px;
   cursor: pointer;
+}
+.edit-form{
+    display: block;
+    justify-content: center;
+    margin-top: 20px;
+    text-align: center;
+    gap: 5px;
 }

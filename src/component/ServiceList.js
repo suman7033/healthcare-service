@@ -117,7 +117,7 @@ const ServiceList = ({refresh}) => {
               value={editService.name}
               onChange={handleEditChange}
               placeholder="Service Name"
-            />
+            /> &nbsp;
             <select
               name="select"
               value={editService.select}
@@ -127,14 +127,14 @@ const ServiceList = ({refresh}) => {
               <option value="Dental care">Dental care</option>
               <option value="X-ray">X-ray</option>
               <option value="Preventive">Preventive</option>
-            </select>
+            </select> &nbsp;
             <input
               type="number"
               name="price"
               value={editService.price}
               onChange={handleEditChange}
               placeholder="Price"
-            />
+            /> &nbsp;
             <button onClick={handleUpdate}>Update</button>
           </div>
         )}
