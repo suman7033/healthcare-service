@@ -4,7 +4,9 @@ import "./App.css";
 
 const App = () => {
 
-    const [ShowData, setShowData]=useState([]);
+    const [services, setServices]=useState([]);
+    const [refresh, setRefresh]=useState(0);
+
     const nameRef=useRef();
     const selectRef=useRef();
     const priceRef=useRef();
@@ -16,7 +18,6 @@ const App = () => {
         select:selectRef.current.value,
         price: priceRef.current.value
     }
-    setShowData(FormData);
     e.preventDefault();
     try{
       const url="https://healthcare-services-assignment-default-rtdb.firebaseio.com/healthCare.json"
@@ -30,7 +31,9 @@ const App = () => {
       });
 
       if(response.ok){
-         alert("Add sucessfully");
+         setServices((prevServices)=>[...prevServices,FormData]);
+         setRefresh((prev)=> prev+1);
+         alert("Added sucessfully");
       }else{
         alert("Failed to submit Form");
       }
@@ -40,7 +43,7 @@ const App = () => {
 }
   return (
     <div>
-       <ServiceList/><br/>
+       <ServiceList refresh={refresh}/><br/>
        <hr/>
 
        <div className='form-div'>

@@ -1,1 +1,28 @@
+.form-div{
+    display: flex;
+    justify-content: center;
+    border: 2px solid gray;
+    gap: 10px;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+}
+
+.lable{
+    color: rgb(146, 146, 229);
+    font-size: 20px;
+}
+.form-img{
+    width: 20vw;
+}
+.select{
+    font-size: 20px;
+}
+@media (max-width: 760px) {
+    .form-img{
+        width: 35vw;
+    }
+}
 
